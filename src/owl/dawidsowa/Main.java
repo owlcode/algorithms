@@ -1,12 +1,9 @@
 package owl.dawidsowa;
 
-import com.sun.xml.internal.xsom.impl.scd.Iterators;
-
 import java.awt.*;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
 
 public class Main {
     void constructor() {
