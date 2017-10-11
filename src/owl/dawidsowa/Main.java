@@ -1,0 +1,60 @@
+package owl.dawidsowa;
+
+import com.sun.xml.internal.xsom.impl.scd.Iterators;
+
+import java.awt.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Main {
+    void constructor() {
+        System.out.println("Dupa");
+    }
+
+    public static void main(String[] args) {
+        List<Point> points;
+        List<Point> convexShell;
+        Input input = new Input();
+
+        System.out.println("Dupa");
+        points = convertToPoints(input);
+        convexShell = GrahamScan.getConvexHull(points);
+
+    }
+
+    private static ArrayList<Point> convertToPoints(Input input) {
+        ArrayList<Point> points = new ArrayList<>();
+
+        for (Iterator<String> i = readFromStream(input).iterator(); i.hasNext(); ) {
+            Point p = new PointFactory().get(i.next());
+            points.add(p);
+        }
+
+        return points;
+    }
+
+    private static ArrayList<String> readFromStream(Input input) {
+        ArrayList<String> userInput = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            userInput.add(input.read());
+        }
+
+        return userInput;
+    }
+
+    private static Boolean isInside(List<Point> boundary, Point point) {
+        return Boolean.FALSE;
+//        int nvert = boundary.size();
+//        int i, j, c = 0;
+//        for (int i = 0, int j = nvert - 1; i < nvert ; j = i++) {
+//            if (((verty[i] > testy) != (verty[j] > testy)) &&
+//                    (testx < (vertx[j] - vertx[i]) * (testy - verty[i]) / (verty[j] - verty[i]) + vertx[i]))
+//                c = !c;
+//        }
+//        return c ? true : false;
+
+    }
+}
