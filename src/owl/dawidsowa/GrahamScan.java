@@ -35,7 +35,7 @@ public final class GrahamScan {
     /**
      * An enum denoting a directional-turn between 3 points (vectors).
      */
-    protected static enum Turn { CLOCKWISE, COUNTER_CLOCKWISE, COLLINEAR }
+    protected enum Turn { CLOCKWISE, COUNTER_CLOCKWISE, COLLINEAR }
 
     /**
      * Returns true iff all points in <code>points</code> are collinear.
