@@ -3,35 +3,33 @@ package lab;
 import lab.c1Sort.*;
 
 public class Main {
+    private static int[] testCases;
+
     public static void main(String[] args) {
-        Main.sortingLab();
-        Main.heapSort();
+        Main.testCases = new int[]{4000, 7000, 10000, 20000, 30000, 40000, 50000, 70000};
+        Main.insertSort();
+        Main.bubbleSort();
     }
 
-    private static void heapSort() {
-//        HeapSort heapSort = new HeapSort();
-//        double[] input = new double[]{4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
-//
-//        Out.std("HeapSort\n");
-//        Out.std(input);
-//        Out.std(heapSort.sort(input));
-    }
+    private static void insertSort() {
+        Out.std("InsertSort (l. obiektów, średni, pesymistyczny, optymistyczny) \n");
 
-    private static void sortingLab() {
-        Out.std("Cwiczenie 1 - 2017\n");
-        Out.std("InsertSort (l. obiektów, czas w milisekundach) \n");
-        int[] cases = new int[]{4000, 7000, 10000, 20000, 30000, 40000, 50000, 70000};
-
-        for (int i = 0; i < cases.length; i++) {
-            Out.std(cases[i] + "\t");
-            Out.std(SortTimeTester.insertSortRandomValuesDuration(cases[i]));
-            Out.std(" \n");
+        for (int i = 0; i < testCases.length; i++) {
+            Out.std(testCases[i] + "\t");
+            Out.std(SortTimeTester.insertSortRandomValuesDuration(testCases[i]) + "\t");
+            Out.std(SortTimeTester.insertSortPesimisticValuesDuration(testCases[i]) + "\t");
+            Out.std(SortTimeTester.insertSortOptimisticValuesDuration(testCases[i]) + "\t");
+            Out.std("\n");
         }
+    }
 
+    private static void bubbleSort() {
         Out.std("BubbleSort (l. obiektów, czas w milisekundach) \n");
-        for (int i = 0; i < cases.length; i++) {
-            Out.std(cases[i] + "\t");
-            Out.std(SortTimeTester.bubbleSortRandomValuesDuration(cases[i]));
+        for (int i = 0; i < testCases.length; i++) {
+            Out.std(testCases[i] + "\t");
+            Out.std(SortTimeTester.bubbleSortRandomValuesDuration(testCases[i]) + "\t");
+            Out.std(SortTimeTester.bubbleSortPesimisticValuesDuration(testCases[i]) + "\t");
+            Out.std(SortTimeTester.bubbleSortOptimisticValuesDuration(testCases[i]) + "\t");
             Out.std("\n");
         }
     }
