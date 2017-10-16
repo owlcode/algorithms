@@ -1,9 +1,6 @@
 package lab;
 
-import lab.c1Sort.HeapSort;
-import lab.c1Sort.BubbleSort;
-import lab.c1Sort.ComparableObject;
-import lab.c1Sort.InsertSort;
+import lab.c1Sort.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,27 +12,32 @@ public class Main {
     }
 
     private static void heapSort() {
-        HeapSort heapSort = new HeapSort();
-        double[] input = new double[]{4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
-
-        Out.std("HeapSort\n");
-        Out.std(input);
-        Out.std(heapSort.sort(input));
+//        HeapSort heapSort = new HeapSort();
+//        double[] input = new double[]{4, 1, 3, 2, 16, 9, 10, 14, 8, 7};
+//
+//        Out.std("HeapSort\n");
+//        Out.std(input);
+//        Out.std(heapSort.sort(input));
     }
 
     private static void sortingLab() {
         Out.std("Cwiczenie 1 - 2017\n");
 
-        InsertSort<ComparableObject> insertSort = new InsertSort<>();
-        BubbleSort<ComparableObject> bubbleSort = new BubbleSort<>();
-        List<ComparableObject> list;
+        InsertSort<krzeslo> insertSort = new InsertSort<>();
+        BubbleSort<IComparable> bubbleSort = new BubbleSort<>();
+        List<IComparable> list;
 
         Out.std("InsertSort");
         list = new ArrayList<>();
-        list.add(new ComparableObject(9));
-        list.add(new ComparableObject(1));
+
+        IComparable<krzeslo> k = new krzeslo(9);
+        IComparable<stol> s = new stol(1);
+
+        list.add(new krzeslo(9));
+        list.add(new stol(1));
         list.add(new ComparableObject(4));
 
+        System.out.println(s.compareTo(s));
         Out.std(insertSort.sort(list));
 
         Out.std("BubbleSort");

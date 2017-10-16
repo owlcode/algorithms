@@ -2,7 +2,7 @@ package lab.c1Sort;
 
 import java.util.List;
 
-public class BubbleSort<T extends Comparable> {
+public class BubbleSort<T extends IComparable> {
     public List<T> sort(List<T> list) {
         for (int i = 0; i < list.size(); i++) {
             for (int j = 1; j < (list.size() - i); j++) {

@@ -1,9 +1,9 @@
 package lab.c1Sort;
 
-public class ComparableObject implements IComparable<ComparableObject> {
+public class stol implements IComparable<stol> {
     private int value;
 
-    public ComparableObject(int value) {
+    public stol(int value) {
         this.value = value;
     }
 
@@ -12,7 +12,7 @@ public class ComparableObject implements IComparable<ComparableObject> {
     }
 
     @Override
-    public int compareTo(ComparableObject o) {
+    public int compareTo(stol o) {
         if (this.value == o.getvalue()) {
             return 0;
         }

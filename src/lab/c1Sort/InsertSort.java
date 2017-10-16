@@ -2,7 +2,7 @@ package lab.c1Sort;
 
 import java.util.List;
 
-public class InsertSort<T extends Comparable> {
+public class InsertSort<T extends IComparable<? super T>> {
 
     public List<T> sort(List<T> list) {
         int n = list.size();
