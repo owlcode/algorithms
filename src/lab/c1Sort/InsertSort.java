@@ -1,8 +1,11 @@
 package lab.c1Sort;
 
+import lab.c1Sort.Interface.IComparable;
+import lab.c1Sort.Interface.IListSorter;
+
 import java.util.List;
 
-public class InsertSort<T extends IComparable<? super T>> {
+public class InsertSort<T extends IComparable> implements IListSorter<T> {
 
     public List<T> sort(List<T> list) {
         int n = list.size();

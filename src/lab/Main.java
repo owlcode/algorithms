@@ -2,9 +2,6 @@ package lab;
 
 import lab.c1Sort.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         Main.sortingLab();
@@ -22,31 +19,20 @@ public class Main {
 
     private static void sortingLab() {
         Out.std("Cwiczenie 1 - 2017\n");
+        Out.std("InsertSort (l. obiektów, czas w milisekundach) \n");
+        int[] cases = new int[]{4000, 7000, 10000, 20000, 30000, 40000, 50000, 70000};
 
-        InsertSort<krzeslo> insertSort = new InsertSort<>();
-        BubbleSort<IComparable> bubbleSort = new BubbleSort<>();
-        List<IComparable> list;
+        for (int i = 0; i < cases.length; i++) {
+            Out.std(cases[i] + "\t");
+            Out.std(SortTimeTester.insertSortRandomValuesDuration(cases[i]));
+            Out.std(" \n");
+        }
 
-        Out.std("InsertSort");
-        list = new ArrayList<>();
-
-        IComparable<krzeslo> k = new krzeslo(9);
-        IComparable<stol> s = new stol(1);
-
-        list.add(new krzeslo(9));
-        list.add(new stol(1));
-        list.add(new ComparableObject(4));
-
-        System.out.println(s.compareTo(s));
-        Out.std(insertSort.sort(list));
-
-        Out.std("BubbleSort");
-        list = new ArrayList<>();
-
-        list.add(new ComparableObject(9));
-        list.add(new ComparableObject(1));
-        list.add(new ComparableObject(4));
-
-        Out.std(bubbleSort.sort(list));
+        Out.std("BubbleSort (l. obiektów, czas w milisekundach) \n");
+        for (int i = 0; i < cases.length; i++) {
+            Out.std(cases[i] + "\t");
+            Out.std(SortTimeTester.bubbleSortRandomValuesDuration(cases[i]));
+            Out.std("\n");
+        }
     }
 }

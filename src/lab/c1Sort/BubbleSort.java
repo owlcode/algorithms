@@ -1,8 +1,11 @@
 package lab.c1Sort;
 
+import lab.c1Sort.Interface.IComparable;
+import lab.c1Sort.Interface.IListSorter;
+
 import java.util.List;
 
-public class BubbleSort<T extends IComparable> {
+public class BubbleSort<T extends IComparable> implements IListSorter<T> {
     public List<T> sort(List<T> list) {
         for (int i = 0; i < list.size(); i++) {
             for (int j = 1; j < (list.size() - i); j++) {

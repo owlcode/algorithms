@@ -1,5 +1,6 @@
-package lab.c1Sort;
+package lab.c1Sort.Test;
 
+import lab.c1Sort.Heap;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

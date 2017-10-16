@@ -1,18 +1,16 @@
-package lab.c1Sort;
+package lab.c1Sort.Model;
 
-public class krzeslo implements IComparable<krzeslo> {
-    private int value;
+import lab.c1Sort.Interface.IComparable;
 
-    public krzeslo(int value) {
-        this.value = value;
-    }
+public abstract class Mebel implements IComparable<Mebel> {
+    protected int value;
 
     public int getvalue() {
         return this.value;
     }
 
     @Override
-    public int compareTo(krzeslo o) {
+    public int compareTo(Mebel o) {
         if (this.value == o.getvalue()) {
             return 0;
         }
