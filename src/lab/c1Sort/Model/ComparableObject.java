@@ -1,6 +1,8 @@
-package lab.c1Sort;
+package lab.c1Sort.Model;
 
-public class ComparableObject implements Comparable<ComparableObject> {
+import lab.c1Sort.Interface.IComparable;
+
+public class ComparableObject implements IComparable<ComparableObject> {
     private int value;
 
     public ComparableObject(int value) {

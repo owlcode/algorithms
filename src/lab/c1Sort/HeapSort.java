@@ -1,5 +1,7 @@
 package lab.c1Sort;
 
+import lab.c1Sort.Interface.ListSorter;
+
 public class HeapSort implements ListSorter {
     public static void main() {
         Heap<Integer> heap = new Heap<Integer>();

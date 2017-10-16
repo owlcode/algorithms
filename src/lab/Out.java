@@ -1,6 +1,6 @@
 package lab;
 
-import lab.c1Sort.ComparableObject;
+import lab.c1Sort.Model.Mebel;
 
 import java.util.List;
 
@@ -19,7 +19,11 @@ public class Out {
         Out.std("]\n");
     }
 
-    public static void std(List<ComparableObject> output) {
+    public static void std(long output) {
+        System.out.print(output);
+    }
+
+    public static void std(List<Mebel> output) {
         int iterator = 0;
         Out.std("[");
         for (iterator = 0; iterator < output.size(); iterator++) {

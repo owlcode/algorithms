@@ -1,5 +1,7 @@
 package lab.c1Sort;
 
+import lab.c1Sort.Interface.HeapInterface;
+
 import java.util.ArrayList;
 import java.util.List;
 

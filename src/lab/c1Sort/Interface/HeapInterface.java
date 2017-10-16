@@ -1,4 +1,4 @@
-package lab.c1Sort;
+package lab.c1Sort.Interface;
 
 public interface HeapInterface <T extends Comparable<T>> {
     void put(T item);
