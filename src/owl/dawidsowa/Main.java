@@ -1,5 +1,9 @@
 package owl.dawidsowa;
 
+import lab.Out;
+import lab.c2Sheath.GrahamScan;
+import lab.c2Sheath.PointFactory;
+
 import java.awt.*;
 import java.util.List;
 import java.util.ArrayList;
@@ -16,20 +20,12 @@ public class Main {
         Input input = new Input();
 
         System.out.println("Dupa");
-        points = convertToPoints(input);
+        points = PointFactory.anyPoints(5);
+
         convexShell = GrahamScan.getConvexHull(points);
 
-    }
+        Out.std(convexShell);
 
-    private static ArrayList<Point> convertToPoints(Input input) {
-        ArrayList<Point> points = new ArrayList<>();
-
-        for (Iterator<String> i = readFromStream(input).iterator(); i.hasNext(); ) {
-            Point p = new PointFactory().get(i.next());
-            points.add(p);
-        }
-
-        return points;
     }
 
     private static ArrayList<String> readFromStream(Input input) {

@@ -6,15 +6,20 @@ public abstract class Mebel implements IComparable<Mebel> {
     protected int value;
 
     public int getvalue() {
-        return this.value;
+        return value;
     }
 
     @Override
     public int compareTo(Mebel o) {
-        if (this.value == o.getvalue()) {
+        if (value == o.getvalue()) {
             return 0;
         }
 
-        return this.value > o.getvalue() ? 1 : -1;
+        return value > o.getvalue() ? 1 : -1;
+    }
+
+    @Override
+    public String toString() {
+        return Integer.toString(value);
     }
 }

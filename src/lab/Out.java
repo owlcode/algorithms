@@ -2,6 +2,7 @@ package lab;
 
 import lab.c1Sort.Model.Mebel;
 
+import java.awt.*;
 import java.util.List;
 
 public class Out {
@@ -23,11 +24,11 @@ public class Out {
         System.out.print(output);
     }
 
-    public static void std(List<Mebel> output) {
+    public static <T> void std(List<T> output) {
         int iterator = 0;
         Out.std("[");
         for (iterator = 0; iterator < output.size(); iterator++) {
-            Out.std(output.get(iterator).getvalue() + (output.size() - 1 == iterator ? "" : ", "));
+            Out.std(output.get(iterator).toString() + (output.size() - 1 == iterator ? "" : ", "));
 
         }
         Out.std("]\n");
