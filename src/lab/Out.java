@@ -33,4 +33,12 @@ public class Out {
         }
         Out.std("]\n");
     }
+
+    public static void stdPointList(List<Point> output) {
+        int iterator = 0;
+        for (iterator = 0; iterator < output.size(); iterator++) {
+            Out.std(output.get(iterator).getX() + "\t" + output.get(iterator).getY() + "\n");
+
+        }
+    }
 }

@@ -14,10 +14,9 @@ public class PointFactory {
         ArrayList<Point> points = new ArrayList<>();
         Random r = new Random();
         for (int i = 0; i < number; i++) {
-            points.add(new Point(r.nextInt(), r.nextInt()));
+            points.add(new Point(r.nextInt(100), r.nextInt(100)));
         }
 
         return points;
-
     }
 }
